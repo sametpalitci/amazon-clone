@@ -1,0 +1,26 @@
+{
+  "name": "product",
+  "version": "0.0.1",
+  "description": "product",
+  "author": "sametpalitci <hyorax@gmail.com>",
+  "homepage": "https://github.com/sametpalitci/amazon-clone#readme",
+  "license": "ISC",
+  "main": "lib/product.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sametpalitci/amazon-clone.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sametpalitci/amazon-clone/issues"
+  }
+}
