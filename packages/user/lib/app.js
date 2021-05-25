@@ -1,9 +1,9 @@
-require('dotenv').config({path: '../../.env'});
+require('dotenv').config({ path: '../../.env' });
 
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const {graphqlHTTP} = require('express-graphql')
+const { graphqlHTTP } = require('express-graphql');
 
 const app = express();
 const db = require('../models');
@@ -14,11 +14,19 @@ app.use(cors());
 
 const RootGrapQLSchema = require('../graphql');
 
-app.use('/graphql',graphqlHTTP({
-    schema:RootGrapQLSchema,
-    graphiql:true
-}));
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: RootGrapQLSchema,
+    graphiql: true,
+  })
+);
 
-db.sequelize.sync().then(()=>{
-    app.listen(process.env.API_USERS_PORT, () => console.log(`PORT:` + process.env.API_USERS_PORT));
-}).catch((err)=>console.error(err))
+db.sequelize
+  .sync()
+  .then(() => {
+    app.listen(process.env.API_USERS_PORT, () =>
+      console.log(`PORT:` + process.env.API_USERS_PORT)
+    );
+  })
+  .catch((err) => console.error(err));

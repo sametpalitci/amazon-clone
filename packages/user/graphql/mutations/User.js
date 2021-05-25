@@ -1,7 +1,7 @@
-const { GraphQLString } = require("graphql");
+const { GraphQLString } = require('graphql');
 
-const UserType = require("../types/User");
-const UserResolver = require("../resolvers/User");
+const UserType = require('../types/User');
+const UserResolver = require('../resolvers/User');
 
 function login() {
   return {

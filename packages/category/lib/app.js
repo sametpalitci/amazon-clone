@@ -3,5 +3,5 @@
 module.exports = category;
 
 function category() {
-    // TODO
+  // TODO
 }

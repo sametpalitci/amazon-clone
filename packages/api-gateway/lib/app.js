@@ -1,4 +1,4 @@
-require('dotenv').config({path: '../../.env'});
+require('dotenv').config({ path: '../../.env' });
 
 const express = require('express');
 const morgan = require('morgan');
@@ -14,4 +14,6 @@ const mainRouter = require('../routes');
 
 app.use('/api/v1/api-gateway', mainRouter);
 
-app.listen(process.env.API_GATEWAY_PORT, () => console.log(`PORT:` + process.env.API_GATEWAY_PORT));
+app.listen(process.env.API_GATEWAY_PORT, () =>
+  console.log(`PORT:` + process.env.API_GATEWAY_PORT)
+);

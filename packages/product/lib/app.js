@@ -3,5 +3,5 @@
 module.exports = product;
 
 function product() {
-    // TODO
+  // TODO
 }
